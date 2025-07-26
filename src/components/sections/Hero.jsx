@@ -53,7 +53,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.7 }}
           >
-            Hi there! I’m Nicole Tan, a computer science student with a creative edge. I love building digital experiences—coding apps, designing interfaces, and blending tech with creativity. This is where I share my journey and projects. Thanks for visiting!
+            Hi there! I'm Nicole Tan, a computer science student with a creative edge. I love building digital experiences—coding apps, designing interfaces, and blending tech with creativity. This is where I share my journey and projects. Thanks for visiting! ✨
           </motion.p>
           <motion.div
             className="flex justify-center md:justify-start gap-4 mb-6"
