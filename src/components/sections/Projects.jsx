@@ -28,18 +28,18 @@ const Projects = () => {
       title: 'FAFSA Friends',
       description: 'A mobile app that simplifies the FAFSA process for first-gen and low-income students using React Native and Streamlit. Integrated Google Cloud Vision and Firebase for secure authentication and data handling. Built at PearlHacks 2025.',
       technologies: ['React Native', 'Streamlit', 'Firebase', 'Google Cloud Vision'],
-      github: 'https://github.com/yourusername/fafsa-friends',
+      github: 'https://github.com/5starnic10/fafsa-friends',
       live: '',
-      image: '/project1.jpg',
+      image: '/fafsafriends.png',
       featured: true,
     },
     {
       title: 'EcoQuest',
       description: 'An iOS app to help users plan efficient, sustainable routes by combining walking, biking, and bus travel. Built with Swift, MapKit, and CoreLocation at Hack NC State 2025.',
       technologies: ['Swift', 'MapKit', 'CoreLocation', 'Figma'],
-      github: 'https://github.com/yourusername/ecoquest',
+      github: 'https://github.com/5starnic10/ecoquest',
       live: '',
-      image: '/project2.jpg',
+      image: '/Ecoquest.png',
     },
     {
       title: 'Project Secure',
@@ -47,7 +47,7 @@ const Projects = () => {
       technologies: ['Java', 'Figma'],
       github: 'https://github.com/spanja05/HackNC24',
       live: '',
-      image: '/project-secure-ui.png',
+      image: '/projectsecure.png',
     },
   ];
 
