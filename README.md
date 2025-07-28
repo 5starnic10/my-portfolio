@@ -1,4 +1,4 @@
-# Nicole Tan - Portfolio
+# Nicole Tan's Portfolio
 
 A modern, responsive portfolio website built with React, showcasing my skills, projects, and experience.
 
@@ -23,7 +23,7 @@ A modern, responsive portfolio website built with React, showcasing my skills, p
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/my-portfolio.git
+   git clone https://github.com/5starnic10/my-portfolio.git
    cd my-portfolio
    ```
 

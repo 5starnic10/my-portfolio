@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa';
 
 const Hero = () => {
   return (
@@ -76,6 +76,15 @@ const Hero = () => {
               aria-label="LinkedIn"
             >
               <FaLinkedin />
+            </a>
+            <a
+              href="/Nicole_Tan_Resume.pdf"
+              download="Nicole_Tan_Resume.pdf"
+              className="icon-link text-2xl"
+              aria-label="Download Resume"
+              title="Download Resume"
+            >
+              <FaDownload />
             </a>
           </motion.div>
           <motion.a

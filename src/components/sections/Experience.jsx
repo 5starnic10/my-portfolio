@@ -141,16 +141,6 @@ const Experience = () => (
                   <span className="block text-[#4a6fa5] dark:text-[#b8d6fa] font-semibold">{exp.org}</span>
                   {exp.date && <span className="block text-sm text-[#bfa2f7] dark:text-[#f7c6ce]">{exp.date}</span>}
                 </div>
-                {exp.photos && (
-                  <a
-                    href={exp.photos}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block mt-2 px-4 py-2 rounded-full bg-[#e0e7ff] text-[#3a2e5c] font-semibold shadow hover:bg-[#f7c6ce] hover:text-[#3a2e5c] transition"
-                  >
-                    See Photos
-                  </a>
-                )}
               </div>
               <ul className="list-disc pl-5 text-text dark:text-[#f7f7fa] space-y-1 mt-2">
                 {exp.bullets.map((b, j) => (
@@ -179,16 +169,6 @@ const Experience = () => (
                   <span className="block text-[#4a6fa5] dark:text-[#b8d6fa] font-semibold">{exp.org}</span>
                   {exp.date && <span className="block text-sm text-[#bfa2f7] dark:text-[#f7c6ce]">{exp.date}</span>}
                 </div>
-                {exp.photos && (
-                  <a
-                    href={exp.photos}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block mt-2 px-4 py-2 rounded-full bg-[#f7c6ce] text-[#3a2e5c] font-semibold shadow hover:bg-[#e0e7ff] hover:text-[#3a2e5c] transition"
-                  >
-                    See Photos
-                  </a>
-                )}
               </div>
               <ul className="list-disc pl-5 text-text dark:text-[#f7f7fa] space-y-1 mt-2">
                 {exp.bullets.map((b, j) => (
