@@ -129,7 +129,7 @@ const Experience = () => (
           {professional.map((exp, i) => (
             <motion.div
               key={exp.title + exp.org}
-              className="group relative backdrop-blur-md bg-[#f5f7fa] dark:bg-dark/70 rounded-2xl shadow-lg p-6 md:p-8 border-l-8 border-[#a7c7e7] dark:border-[#3a2e5c] transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
+              className="group relative backdrop-blur-md bg-[#0f0f23]/70 dark:bg-[#0a0a1a]/80 rounded-3xl shadow-xl p-6 md:p-8 border-l-6 border-[#4a6fa5]/60 dark:border-[#6b4b8a]/70 transition-all duration-300 hover:shadow-2xl hover:scale-[1.03] hover:bg-[#0f0f23]/80 dark:hover:bg-[#0a0a1a]/90 border-r border-t border-b border-[#4a6fa5]/20 dark:border-[#6b4b8a]/20"
               initial={{ opacity: 0, y: 30, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.6, delay: i * 0.15, ease: "easeOut" }}
@@ -157,7 +157,7 @@ const Experience = () => (
           {leadership.map((exp, i) => (
             <motion.div
               key={exp.title + exp.org}
-              className="group relative backdrop-blur-md bg-[#f5f7fa] dark:bg-dark/70 rounded-2xl shadow-lg p-6 md:p-8 border-l-8 border-[#f7c6ce] dark:border-[#bfa2f7] transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
+              className="group relative backdrop-blur-md bg-[#0f0f23]/70 dark:bg-[#0a0a1a]/80 rounded-3xl shadow-xl p-6 md:p-8 border-l-6 border-[#bfa2f7]/60 dark:border-[#8b6b8a]/70 transition-all duration-300 hover:shadow-2xl hover:scale-[1.03] hover:bg-[#0f0f23]/80 dark:hover:bg-[#0a0a1a]/90 border-r border-t border-b border-[#bfa2f7]/20 dark:border-[#8b6b8a]/20"
               initial={{ opacity: 0, y: 30, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.6, delay: i * 0.15, ease: "easeOut" }}

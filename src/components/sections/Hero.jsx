@@ -80,11 +80,12 @@ const Hero = () => {
             <a
               href="/Nicole_Tan_Resume.pdf"
               download="Nicole_Tan_Resume.pdf"
-              className="icon-link text-2xl"
+              className="icon-link text-2xl flex items-center gap-2"
               aria-label="Download Resume"
               title="Download Resume"
             >
               <FaDownload />
+              <span className="text-sm font-medium">Download Resume</span>
             </a>
           </motion.div>
           <motion.a
