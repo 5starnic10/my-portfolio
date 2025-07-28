@@ -28,7 +28,7 @@ const Projects = () => {
       title: 'FAFSA Friends',
       description: 'A mobile app that simplifies the FAFSA process for first-gen and low-income students using React Native and Streamlit. Integrated Google Cloud Vision and Firebase for secure authentication and data handling. Built at PearlHacks 2025.',
       technologies: ['React Native', 'Streamlit', 'Firebase', 'Google Cloud Vision'],
-      github: 'https://github.com/5starnic10/fafsa-friends',
+      github: 'https://github.com/sandra2j/pearlhacks2025',
       live: '',
       image: '/fafsafriends.png',
       featured: true,
