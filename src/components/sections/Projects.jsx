@@ -107,7 +107,8 @@ const Projects = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="icon-link text-xl"
+                    className="icon-link text-xl hover:scale-110 transition-transform duration-200"
+                    title="View on GitHub"
                   >
                     <FaGithub />
                   </a>
@@ -116,7 +117,8 @@ const Projects = () => {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="icon-link text-xl"
+                      className="icon-link text-xl hover:scale-110 transition-transform duration-200"
+                      title="View Live Demo"
                     >
                       <FaExternalLinkAlt />
                     </a>

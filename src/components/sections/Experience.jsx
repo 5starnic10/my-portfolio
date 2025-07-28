@@ -31,6 +31,7 @@ const professional = [
       'Created a collaborative and inclusive learning environment, with 90% of students reporting increased confidence in computer science topics in post-camp surveys.'
     ],
     photos: '/photos/cs-instructor',
+    skills: ['Python', 'AI', 'Cybersecurity', 'Machine Learning', 'Teaching'],
   },
   {
     title: 'Undergraduate Research Assistant',
@@ -42,6 +43,7 @@ const professional = [
       'Gained experience in low-level code analysis, compiler internals, and automated testing workflows to identify edge-case failures.'
     ],
     photos: '/photos/research',
+    skills: ['Bash', 'C', 'sed', 'grep', 'awk', 'Regular Expressions', 'Compiler Analysis'],
   },
   {
     title: 'Designer',
@@ -53,6 +55,7 @@ const professional = [
       'Contributed to a spread that earned an Honorable Mention in a national collegiate media competition.'
     ],
     photos: '/photos/designer',
+    skills: ['Illustrator', 'Photoshop', 'Design', 'Layout', 'Typography'],
   },
   {
     title: 'Pre-Apprentice',
@@ -64,6 +67,7 @@ const professional = [
       'Created a custom tool organizer adopted by 100+ assembly line employees, boosting workspace efficiency.'
     ],
     photos: '/photos/bosch',
+    skills: ['Prototyping', 'Design', 'Collaboration', 'Presentation', 'Problem Solving'],
   },
   {
     title: 'Front Office Assistant',
@@ -75,6 +79,7 @@ const professional = [
       'Greeted and guided 100+ visitors and prospective students each semester, ensuring an informative and positive UHP experience.'
     ],
     photos: '/photos/office',
+    skills: ['Administration', 'Student Advising', 'Communication', 'Organization'],
   },
   {
     title: 'Honors Student Ambassador',
@@ -86,6 +91,7 @@ const professional = [
       'Facilitate discussions and peer mentorship sessions for groups of 15–30 Honors students, promoting inclusivity and open exchange of diverse perspectives.'
     ],
     photos: '/photos/ambassador',
+    skills: ['Leadership', 'Event Planning', 'Mentorship', 'Public Speaking', 'Community Building'],
   },
   {
     title: 'CSC Ambassador',
@@ -95,6 +101,7 @@ const professional = [
       'Coming soon: Excited to start this new role in the future!'
     ],
     photos: '/photos/csc-ambassador',
+    skills: ['Computer Science', 'Outreach', 'Leadership'],
   },
 ];
 
@@ -147,6 +154,20 @@ const Experience = () => (
                   <li key={j}>{b}</li>
                 ))}
               </ul>
+              {exp.skills && (
+                <div className="mt-4">
+                  <div className="flex flex-wrap gap-2">
+                    {exp.skills.map((skill, skillIndex) => (
+                      <span
+                        key={skillIndex}
+                        className="inline-block px-2 py-1 rounded-full text-xs font-medium bg-[#4a6fa5]/20 dark:bg-[#6b4b8a]/30 text-[#4a6fa5] dark:text-[#bfa2f7] border border-[#4a6fa5]/30 dark:border-[#6b4b8a]/40"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
@@ -175,6 +196,20 @@ const Experience = () => (
                   <li key={j}>{b}</li>
                 ))}
               </ul>
+              {exp.skills && (
+                <div className="mt-4">
+                  <div className="flex flex-wrap gap-2">
+                    {exp.skills.map((skill, skillIndex) => (
+                      <span
+                        key={skillIndex}
+                        className="inline-block px-2 py-1 rounded-full text-xs font-medium bg-[#bfa2f7]/20 dark:bg-[#8b6b8a]/30 text-[#bfa2f7] dark:text-[#d4a5a5] border border-[#bfa2f7]/30 dark:border-[#8b6b8a]/40"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
             </motion.div>
           ))}
         </div>

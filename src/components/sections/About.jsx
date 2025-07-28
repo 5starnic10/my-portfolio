@@ -29,6 +29,7 @@ const skills = [
 // Map of skill to first project anchor id
 const skillToProject = {
   'React Native': 'project-FAFSA Friends',
+  'Streamlit': 'project-FAFSA Friends',
   'Firebase': 'project-FAFSA Friends',
   'Google Cloud Vision': 'project-FAFSA Friends',
   'Swift': 'project-EcoQuest',
@@ -36,6 +37,7 @@ const skillToProject = {
   'CoreLocation': 'project-EcoQuest',
   'Figma': 'project-EcoQuest',
   'Java': 'project-Project Secure',
+  'GitHub': 'project-FAFSA Friends',
 };
 
 const About = () => {
