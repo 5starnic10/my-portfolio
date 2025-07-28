@@ -129,10 +129,10 @@ const Experience = () => (
           {professional.map((exp, i) => (
             <motion.div
               key={exp.title + exp.org}
-              className={`group relative md:ml-12 md:pl-8 backdrop-blur-md bg-[#f5f7fa] dark:bg-dark/70 rounded-2xl shadow-lg p-6 md:p-8 border-l-8 border-[#a7c7e7] dark:border-[#3a2e5c] transition-all duration-300 ${i % 2 === 0 ? 'md:-translate-x-4' : 'md:translate-x-4'}`}
-              initial={{ opacity: 0, x: i % 2 === 0 ? -40 : 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="group relative backdrop-blur-md bg-[#f5f7fa] dark:bg-dark/70 rounded-2xl shadow-lg p-6 md:p-8 border-l-8 border-[#a7c7e7] dark:border-[#3a2e5c] transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, delay: i * 0.15, ease: "easeOut" }}
               viewport={{ once: true }}
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2 gap-2">
@@ -167,10 +167,10 @@ const Experience = () => (
           {leadership.map((exp, i) => (
             <motion.div
               key={exp.title + exp.org}
-              className={`group relative md:ml-12 md:pl-8 backdrop-blur-md bg-[#f5f7fa] dark:bg-dark/70 rounded-2xl shadow-lg p-6 md:p-8 border-l-8 border-[#f7c6ce] dark:border-[#bfa2f7] transition-all duration-300 ${i % 2 === 0 ? 'md:-translate-x-4' : 'md:translate-x-4'}`}
-              initial={{ opacity: 0, x: i % 2 === 0 ? -40 : 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="group relative backdrop-blur-md bg-[#f5f7fa] dark:bg-dark/70 rounded-2xl shadow-lg p-6 md:p-8 border-l-8 border-[#f7c6ce] dark:border-[#bfa2f7] transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, delay: i * 0.15, ease: "easeOut" }}
               viewport={{ once: true }}
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2 gap-2">
