@@ -45,7 +45,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.7 }}
           >
-            Aspiring Software Engineer & CS Student @ NC State
+            Aspiring Software Developer and UI/UX Designer
           </motion.h2>
           <motion.p
             className="text-lg text-text dark:text-[#f7f7fa] mb-8 max-w-xl mx-auto md:mx-0"
@@ -53,7 +53,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.7 }}
           >
-            Hi there! I'm Nicole Tan, a computer science student with a creative edge. I love building digital experiences—coding apps, designing interfaces, and blending tech with creativity. This is where I share my journey and projects. Thanks for visiting! ✨
+            Hi there! I'm Nicole Tan, a computer science student at NC State University with a creative edge. I love building digital experiences: coding apps, designing interfaces, and blending tech with creativity. This is where I share my journey and projects. Thanks for visiting!
           </motion.p>
           <motion.div
             className="flex justify-center md:justify-start gap-4 mb-6"
