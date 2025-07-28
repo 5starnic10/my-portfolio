@@ -17,7 +17,7 @@ const Hero = () => {
         >
           <div className="rounded-full shadow-2xl border-4 border-accent-purple/60 bg-white p-2 relative">
             <img
-              src="/headshot.jpg"
+              src="/Headshot.jpg"
               alt="Nicole Tan Avatar"
               className="w-44 h-44 md:w-56 md:h-56 rounded-full object-cover shadow-lg"
             />
