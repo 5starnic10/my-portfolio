@@ -37,7 +37,7 @@ const Projects = () => {
       title: 'EcoQuest',
       description: 'An iOS app to help users plan efficient, sustainable routes by combining walking, biking, and bus travel. Built with Swift, MapKit, and CoreLocation at Hack NC State 2025.',
       technologies: ['Swift', 'MapKit', 'CoreLocation', 'Figma'],
-      github: 'https://github.com/5starnic10/ecoquest',
+      github: 'https://github.com/sohini1728/EcoQuest',
       live: '',
       image: '/Ecoquest.png',
     },
