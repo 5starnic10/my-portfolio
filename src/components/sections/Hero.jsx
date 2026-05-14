@@ -58,7 +58,7 @@ const Hero = () => {
               Aspiring Software Developer and UI/UX Designer
             </motion.h2>
             <motion.p
-              className="text-base md:text-lg text-game-ink/75 max-w-xl mx-auto md:mx-0"
+              className="text-lg text-game-ink/75 max-w-xl mx-auto md:mx-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.45, duration: 0.7 }}
