@@ -148,26 +148,6 @@
     @apply inline-flex h-6 w-6 items-center justify-center rounded-lg border-2 border-game-ink/15 bg-game-panel text-[0.7rem] text-game-purple shadow-game-soft;
   }
 
-  .stat-bar__meta {
-    @apply inline-flex items-center gap-2;
-  }
-
-  .stat-bar__rank {
-    @apply inline-flex min-w-[1.35rem] items-center justify-center rounded-md border-2 border-game-ink/15 px-1.5 py-0.5 font-pixel text-[0.45rem] leading-none text-game-ink;
-  }
-
-  .stat-bar__rank--pink {
-    @apply bg-game-blush/70;
-  }
-
-  .stat-bar__rank--purple {
-    @apply bg-game-lilac/70;
-  }
-
-  .stat-bar__rank--blue {
-    @apply bg-game-sky/70;
-  }
-
   .stat-bar__score {
     @apply inline-flex items-baseline gap-0.5 font-display text-sm normal-case tracking-normal text-game-ink;
   }
@@ -187,6 +167,17 @@
   .stat-bar__segment {
     @apply relative flex-1 overflow-hidden rounded-md border border-game-ink/10;
     transform-origin: bottom;
+  }
+
+  .stat-bar__segment-fill {
+    @apply absolute inset-y-0 left-0;
+  }
+
+  .stat-bar__segment-fill.stat-bar__segment--pink::after,
+  .stat-bar__segment-fill.stat-bar__segment--purple::after,
+  .stat-bar__segment-fill.stat-bar__segment--blue::after {
+    content: '';
+    @apply pointer-events-none absolute inset-x-1 top-0.5 h-1 rounded-full bg-white/45;
   }
 
   .stat-bar__segment--empty {

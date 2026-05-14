@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaLinkedin, FaEnvelope, FaDownload, FaLightbulb, FaCode, FaHandshake } from 'react-icons/fa';
+import { FaLinkedin, FaEnvelope, FaDownload, FaBrain, FaBolt, FaHandshake } from 'react-icons/fa';
 import StatBar from '../ui/StatBar';
 
 const Hero = () => {
@@ -28,9 +28,9 @@ const Hero = () => {
                 />
               </div>
               <div className="mt-5 space-y-3">
-                <StatBar label="Creativity" value={92} tone="pink" icon={FaLightbulb} />
-                <StatBar label="Code Craft" value={88} tone="purple" icon={FaCode} />
-                <StatBar label="Collaboration" value={95} tone="blue" icon={FaHandshake} />
+                <StatBar label="Quick Learner" value={94} tone="pink" icon={FaBrain} />
+                <StatBar label="Work Ethic" value={96} tone="purple" icon={FaBolt} />
+                <StatBar label="Team Player" value={95} tone="blue" icon={FaHandshake} />
               </div>
             </div>
           </motion.div>
@@ -71,7 +71,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.7 }}
             >
-              Welcome to my portfolio. I build playful, polished digital experiences where code and design meet, with thoughtful details and a soft, colorful touch.
+              Welcome to my portfolio! I build playful, polished digital experiences where code and design meet, with thoughtful details and a soft, colorful touch.
             </motion.p>
             <motion.div
               className="flex justify-center md:justify-start gap-4 mb-6"

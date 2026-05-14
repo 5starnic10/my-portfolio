@@ -68,13 +68,10 @@ const About = () => {
         <div className="page-panel p-10 md:p-16 flex flex-col md:flex-row gap-10 items-center md:items-start relative">
           <div className="flex-1 text-left space-y-4">
             <h2 className="heading mb-4">About Me</h2>
-            <p className="text-lg text-game-ink/85">
+            <p className="text-lg text-game-ink/80">
               I'm Nicole, a computer science student at NC State University who loves building engaging digital experiences. I like blending code and design, whether I'm crafting interactive apps, shaping intuitive interfaces, or finding new ways to merge tech and creativity.
             </p>
-            <p className="text-game-ink/75">
-              I'm also interested in product management and how strong products connect user needs, business goals, and clear technical direction.
-            </p>
-            <p className="text-game-ink/75">
+            <p className="text-lg text-game-ink/80">
               When I'm not coding, you'll find me designing, competing in hackathons, or sharing my love for computer science with others.
             </p>
             <div className="mt-4 rounded-[1.25rem] border-4 border-game-ink/15 bg-game-lilac/20 p-4 text-game-ink shadow-game-soft">

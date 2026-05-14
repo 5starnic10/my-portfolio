@@ -8,8 +8,8 @@ const toneClasses = {
 
 const StatBar = ({ label, value, tone = 'pink', icon: Icon }) => {
   const clamped = Math.max(0, Math.min(100, value));
-  const filledSegments = Math.round(clamped / 10);
-  const rank = clamped >= 90 ? 'S' : clamped >= 80 ? 'A' : clamped >= 70 ? 'B' : 'C';
+  const fullSegments = Math.floor(clamped / 10);
+  const partialFill = (clamped % 10) / 10;
   const fillClass = toneClasses[tone] ?? toneClasses.pink;
 
   return (
@@ -29,12 +29,9 @@ const StatBar = ({ label, value, tone = 'pink', icon: Icon }) => {
           )}
           <span>{label}</span>
         </span>
-        <span className="stat-bar__meta">
-          <span className={`stat-bar__rank stat-bar__rank--${tone}`}>{rank}</span>
-          <span className="stat-bar__score">
-            <span className="stat-bar__score-value">{clamped}</span>
-            <span className="stat-bar__score-suffix">/100</span>
-          </span>
+        <span className="stat-bar__score">
+          <span className="stat-bar__score-value">{clamped}</span>
+          <span className="stat-bar__score-suffix">/100</span>
         </span>
       </motion.div>
       <div
@@ -45,16 +42,29 @@ const StatBar = ({ label, value, tone = 'pink', icon: Icon }) => {
         aria-valuemax={100}
         aria-label={label}
       >
-        {Array.from({ length: 10 }, (_, index) => (
-          <motion.span
-            key={index}
-            className={`stat-bar__segment ${index < filledSegments ? fillClass : 'stat-bar__segment--empty'}`}
-            initial={{ opacity: 0, scaleY: 0.35 }}
-            whileInView={{ opacity: 1, scaleY: 1 }}
-            viewport={{ once: true, amount: 0.6 }}
-            transition={{ duration: 0.35, delay: index * 0.05, ease: 'easeOut' }}
-          />
-        ))}
+        {Array.from({ length: 10 }, (_, index) => {
+          const isFull = index < fullSegments;
+          const isPartial = index === fullSegments && partialFill > 0;
+          const segmentClass = isFull ? fillClass : 'stat-bar__segment--empty';
+
+          return (
+            <motion.span
+              key={index}
+              className={`stat-bar__segment ${segmentClass}`}
+              initial={{ opacity: 0, scaleY: 0.35 }}
+              whileInView={{ opacity: 1, scaleY: 1 }}
+              viewport={{ once: true, amount: 0.6 }}
+              transition={{ duration: 0.35, delay: index * 0.05, ease: 'easeOut' }}
+            >
+              {isPartial && (
+                <span
+                  className={`stat-bar__segment-fill ${fillClass}`}
+                  style={{ width: `${partialFill * 100}%` }}
+                />
+              )}
+            </motion.span>
+          );
+        })}
       </div>
     </motion.div>
   );

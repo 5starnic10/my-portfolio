@@ -234,7 +234,7 @@ const professional = [
     skills: ['Java', 'Spring Boot', 'Python', 'Agile', 'Scalable Systems'],
   },
   {
-    title: 'Teaching Assistant (CSC 116 — Intro to Java)',
+    title: 'Teaching Assistant (CSC 116: Intro to Java)',
     org: 'NC State University',
     location: 'Raleigh, NC',
     date: 'Jan 2026 - Present',
@@ -360,7 +360,7 @@ const Experience = () => (
       <div className="page-panel p-10 md:p-16 relative">
         <h2 className="heading mb-3">Experience</h2>
         <p className="max-w-3xl text-game-ink/75 mb-10">
-          A few chapters I’m proud of — building, teaching, designing, researching, and now heading into fintech.
+          A few chapters I’m proud of: building, teaching, designing, researching, and now heading into fintech.
         </p>
         <div className="mb-10">
           <h3 className="subheading mb-6">Professional Experience</h3>
