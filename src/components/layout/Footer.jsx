@@ -8,9 +8,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-transparent backdrop-blur-sm py-8 border-t border-white/20 dark:border-white/10">
-      <div className="container-padding">
-        <div className="flex flex-col items-center space-y-4">
+    <footer className="fixed bottom-0 left-0 right-0 z-40 border-t-4 border-game-ink bg-game-night/90 backdrop-blur-md shadow-game-soft">
+      <div className="container-padding py-3">
+        <div className="flex flex-col items-center space-y-2">
           <div className="flex space-x-6">
             {socialLinks.map((link, index) => (
               <a
@@ -18,14 +18,14 @@ const Footer = () => {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#3a2e5c] dark:text-[#e0c8ff] hover:text-[#7d5fc5] dark:hover:text-[#bfa2f7] transition-colors duration-200"
+                className="rounded-2xl border-2 border-transparent p-2 text-game-cream/80 transition-colors duration-200 hover:border-game-pink/40 hover:text-game-blush"
                 aria-label={link.label}
               >
                 {link.icon}
               </a>
             ))}
           </div>
-          <p className="text-[#4a6fa5] dark:text-[#b8d6fa] text-sm">
+          <p className="text-game-cream/45 text-xs">
             © {new Date().getFullYear()} Nicole Tan. All rights reserved.
           </p>
         </div>
@@ -34,4 +34,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;

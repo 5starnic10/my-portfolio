@@ -1,91 +1,100 @@
 import { motion } from 'framer-motion';
-import { useRef } from 'react';
-
-const pastelBlob = (
-  <svg
-    className="absolute -top-16 -left-16 w-72 h-72 z-0 opacity-60"
-    viewBox="0 0 200 200"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <defs>
-      <linearGradient id="aboutBlobGradient" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stopColor="#f7c6ce" />
-        <stop offset="100%" stopColor="#d1c4e9" />
-      </linearGradient>
-    </defs>
-    <path
-      fill="url(#aboutBlobGradient)"
-      d="M44.8,-67.2C57.2,-59.2,65.7,-44.2,70.2,-28.7C74.7,-13.2,75.2,2.8,70.2,16.7C65.2,30.6,54.7,42.4,41.7,51.2C28.7,60,14.3,65.8,-1.2,67.3C-16.7,68.8,-33.3,66,-45.2,56.7C-57.2,47.3,-64.5,31.5,-68.2,15.1C-71.9,-1.3,-71.9,-18.3,-64.7,-32.2C-57.5,-46.1,-43.1,-56.9,-27.2,-63.7C-11.3,-70.5,6.1,-73.3,22.2,-70.1C38.3,-66.9,44.8,-67.2,44.8,-67.2Z"
-      transform="translate(100 100)"
-    />
-  </svg>
-);
 
 const skills = [
   'Java', 'Python', 'C', 'JavaScript', 'SQL', 'R', 'HTML/CSS', 'Bash', 'Kotlin',
-  'React', 'Firebase', 'JUnit', 'Jenkins', 'Docker', 'GitHub', 'Figma', 'Android Studio', 'VS Code', 'Eclipse', 'IntelliJ', 'Linux', 'Windows'
+  'React', 'Firebase', 'JUnit', 'Jenkins', 'Docker', 'GitHub', 'Figma', 'Android Studio', 'VS Code', 'Eclipse', 'IntelliJ', 'Linux', 'Windows',
 ];
 
-// Map of skill to first project anchor id
 const skillToProject = {
   'React Native': 'project-FAFSA Friends',
-  'Streamlit': 'project-FAFSA Friends',
-  'Firebase': 'project-FAFSA Friends',
+  Streamlit: 'project-FAFSA Friends',
+  Firebase: 'project-FAFSA Friends',
   'Google Cloud Vision': 'project-FAFSA Friends',
-  'Swift': 'project-EcoQuest',
-  'MapKit': 'project-EcoQuest',
-  'CoreLocation': 'project-EcoQuest',
-  'Figma': 'project-EcoQuest',
-  'Java': 'project-Project Secure',
-  'GitHub': 'project-FAFSA Friends',
+  Swift: 'project-EcoQuest',
+  MapKit: 'project-EcoQuest',
+  CoreLocation: 'project-EcoQuest',
+  Figma: 'project-EcoQuest',
+  Java: 'project-Project Secure',
+  GitHub: 'project-FAFSA Friends',
+};
+
+const skillStyles = {
+  Java: 'skill-pink',
+  Python: 'skill-blue',
+  C: 'skill-purple',
+  JavaScript: 'skill-mix',
+  SQL: 'skill-blue',
+  R: 'skill-purple',
+  'HTML/CSS': 'skill-pink',
+  Bash: 'skill-mix',
+  Kotlin: 'skill-pink',
+  React: 'skill-blue',
+  Firebase: 'skill-pink',
+  JUnit: 'skill-purple',
+  Jenkins: 'skill-mix',
+  Docker: 'skill-blue',
+  GitHub: 'skill-mix',
+  Figma: 'skill-pink',
+  'Android Studio': 'skill-purple',
+  'VS Code': 'skill-blue',
+  Eclipse: 'skill-mix',
+  IntelliJ: 'skill-pink',
+  Linux: 'skill-purple',
+  Windows: 'skill-blue',
 };
 
 const About = () => {
-  // For scroll-to-project
   const handleSkillClick = (skill) => {
     const anchor = skillToProject[skill];
     if (anchor) {
       const el = document.getElementById(anchor);
       if (el) {
         el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        el.classList.add('ring-4', 'ring-[#f7c6ce]', 'transition');
-        setTimeout(() => el.classList.remove('ring-4', 'ring-[#f7c6ce]', 'transition'), 1200);
+        el.classList.add('ring-4', 'ring-game-pink', 'transition');
+        setTimeout(() => el.classList.remove('ring-4', 'ring-game-pink', 'transition'), 1200);
       }
     }
   };
 
   return (
     <section id="about" className="section-padding relative">
-      {pastelBlob}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-        viewport={{ once: true }}
-        className="max-w-5xl mx-auto relative z-10"
+        transition={{ duration: 0.7, ease: 'easeOut' }}
+        viewport={{ once: true, amount: 0.25 }}
+        className="max-w-5xl mx-auto relative z-10 container-padding w-full"
       >
-        <div className="backdrop-blur-md bg-white/70 dark:bg-dark/70 rounded-3xl shadow-xl p-10 md:p-16 flex flex-col md:flex-row gap-10 items-center md:items-start">
-          {/* Bio */}
+        <div className="page-panel p-10 md:p-16 flex flex-col md:flex-row gap-10 items-center md:items-start relative">
           <div className="flex-1 text-left space-y-4">
-            <h2 className="heading mb-4 text-[#3a2e5c] dark:text-accent-pink">About Me</h2>
-            <p className="text-lg text-text dark:text-[#f7f7fa]">
-              Hi! I’m Nicole, a computer science student at NC State with a passion for building creative, meaningful digital experiences. I love blending code and design—whether I’m coding interactive apps, designing intuitive interfaces, or exploring new ways to combine tech and creativity.
+            <h2 className="heading mb-4">About Me</h2>
+            <p className="text-lg text-game-ink/85">
+              I'm Nicole, a computer science student at NC State University who loves building engaging digital experiences. I like blending code and design, whether I'm crafting interactive apps, shaping intuitive interfaces, or finding new ways to merge tech and creativity.
             </p>
-            <div className="mt-4 p-4 rounded-xl bg-[#f7c6ce]/30 dark:bg-[#3a2e5c]/40 text-[#3a2e5c] dark:text-[#f7c6ce] font-semibold shadow-sm">
-              <span className="block mb-1">Did you know?</span>
-              <span>I’m also a yearbook designer, hackathon enthusiast, and love teaching CS to others!</span>
+            <p className="text-game-ink/75">
+              I'm also interested in product management and how strong products connect user needs, business goals, and clear technical direction.
+            </p>
+            <p className="text-game-ink/75">
+              When I'm not coding, you'll find me designing, competing in hackathons, or sharing my love for computer science with others.
+            </p>
+            <div className="mt-4 rounded-[1.25rem] border-4 border-game-ink/15 bg-game-lilac/20 p-4 text-game-ink shadow-game-soft">
+              <span className="pixel-label block mb-2">Fun Facts</span>
+              <span>I also love painting, solving puzzles, playing word games, and thrifting.</span>
             </div>
           </div>
-          {/* Skills */}
+
           <div className="flex-1">
-            <h3 className="subheading mb-4 text-[#4a6fa5] dark:text-[#b8d6fa]">Technical Skills</h3>
+            <h3 className="subheading mb-2">Technical Skills</h3>
+            <p className="pixel-label mb-4">Tap a highlighted skill to jump to a related project.</p>
             <div className="flex flex-wrap gap-2">
               {skills.map((skill, i) => {
                 const isLinked = !!skillToProject[skill];
+                const styleClass = skillStyles[skill] ?? 'skill-mix';
+
                 return (
                   <motion.span
                     key={skill}
-                    className={`badge bg-[#e0e7ff] dark:bg-[#3a2e5c] text-[#3a2e5c] dark:text-[#f7c6ce] shadow-sm cursor-pointer transition-all duration-200 ${isLinked ? 'hover:ring-2 hover:ring-[#f7c6ce] hover:scale-105' : ''}`}
+                    className={`skill-badge ${styleClass} cursor-pointer transition-all duration-200 ${isLinked ? 'hover:-translate-y-0.5 hover:ring-2 hover:ring-game-lilac' : 'opacity-95'}`}
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.05 * i, duration: 0.3 }}
@@ -105,4 +114,4 @@ const About = () => {
   );
 };
 
-export default About; 
+export default About;
